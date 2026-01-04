@@ -9,7 +9,7 @@ export class CustomerAccountPage extends BasePage {
   balanceText: Locator;
   logoutBtn: Locator;
 
-  // ✅ ADD THIS
+  
   transactionsBtn: Locator;
 
   constructor(page: Page) {
@@ -22,7 +22,7 @@ export class CustomerAccountPage extends BasePage {
 
     this.logoutBtn = page.locator('button[ng-click="byebye()"]');
 
-    // ✅ ADD THIS
+  
     this.transactionsBtn = page.locator('button[ng-click="transactions()"]');
   }
 
@@ -42,7 +42,7 @@ export class CustomerAccountPage extends BasePage {
     await this.logoutBtn.click();
   }
 
-  // ✅ ADD THIS METHOD
+
   async goToTransactions(): Promise<void> {
     await this.transactionsBtn.click();
   }
