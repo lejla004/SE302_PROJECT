@@ -18,9 +18,9 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('FN-09 Withdraw More Than Balance', async () => {
-  // Try withdrawing a very large amount
+  
   await account.withdraw('10000');
 
-  // Assertion: balance is still shown (transaction rejected)
+
   await expect(account.balanceText).toBeVisible();
 });
